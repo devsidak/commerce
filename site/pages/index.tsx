@@ -2,7 +2,7 @@ import commerce from '@lib/api/commerce'
 import { Layout } from '@components/common'
 import { ProductCard } from '@components/product'
 import { Grid, Marquee, Hero } from '@components/ui'
-// import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
+import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 
 export async function getStaticProps({
@@ -36,10 +36,15 @@ export async function getStaticProps({
 }
 
 export default function Home({
-  products,
+  products
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  console.log('products - ', products)
   return (
     <>
+    <Hero
+        headline="Drive One Demo"
+        description="We at Drive One (Pvt) Ltd, the authorized dealer for Audi in Sri Lanka wishes to extend our expertise in sales and marketing of the most progressive premium brand in the world. We will assist you in selling your valued automobile through our “Drive One Select” service portal. Our main goal is to offer you utmost convenience during the sale of your pre-owned automobile."
+      />
       <Grid variant="filled">
         {products.slice(0, 3).map((product: any, i: number) => (
           <ProductCard

@@ -23,5 +23,10 @@
       "pre-commit": "turbo run lint"
     }
   },
-  "packageManager": "yarn@1.22.17"
+  "packageManager": "yarn@1.22.17",
+  "dependencies": {
+    "@mui/material": "^5.5.3",
+    "@mui/styled-engine-sc": "^5.5.2",
+    "styled-components": "^5.3.5"
+  }
 }
